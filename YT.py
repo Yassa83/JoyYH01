@@ -1,3 +1,9 @@
+
+###YassaTeamScript###
+##GodLuck For Decoding ###
+##Decoding Kids###
+##Kids Script##
+###YassaTeamScript###
 import sys
 import marshal
 
