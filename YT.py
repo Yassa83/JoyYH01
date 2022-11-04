@@ -1,4 +1,3 @@
-
 ###YassaTeamScript###
 ##GodLuck For Decoding ###
 ##Decoding Kids###
