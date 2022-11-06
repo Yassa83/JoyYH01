@@ -70,6 +70,7 @@ def start(message):
     else:
             bot.send_message(message.chat.id,("تمام يحب بيتم تحميل اللي طلبته حاليا..انتظر 🤍"))
             chc = yt.streams.get_highest_resolution().download("Bot")
+            print(chc)
             nam=shutil.move(chc,chc)
             print(nam)
             try:
