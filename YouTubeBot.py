@@ -36,11 +36,11 @@ def start(message):
         bot.send_message(message.chat.id,("تمام يحب بيتم تحميل اللي طلبته حاليا..انتظر 🤍"))
         chc = yt.streams.get_audio_only().download("Bot")
         nam = chc.splitlines()[0].replace(".mp4", "")
-        nam = nam.splitlines()[0].replace(".webm", ".mp3")
-        #nam=shutil.move(chc,nam+'.mp3')
+        nam = nam.splitlines()[0].replace(".webm", "")
+        nam=shutil.move(chc,nam+'.mp3')
         print(nam)
         try:
-            bot.send_document(message.chat.id,open(nam,'rb'))
+            bot.send_document(message.chat.id,open(nam,"rb"))
         except:
             bot.send_message(message.chat.id,("الملف كبير مش هقدر احمله وابعتهولك"))
             rmtree("Bot")
