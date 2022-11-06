@@ -40,7 +40,7 @@ def start(message):
         nam=shutil.move(chc,""+nam+".mp3")
         print(nam)
         try:
-            bot.send_document(message.chat.id,open(nam,"rb"))
+            bot.send_document(message.chat.id,open(nam))
         except:
             bot.send_message(message.chat.id,("الملف كبير مش هقدر احمله وابعتهولك"))
             rmtree("Bot")
