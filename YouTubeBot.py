@@ -71,10 +71,10 @@ def start(message):
             bot.send_message(message.chat.id,("تمام يحب بيتم تحميل اللي طلبته حاليا..انتظر 🤍"))
             chc = yt.streams.get_highest_resolution().download("Bot")
             print(chc)
-            #nam=shutil.move(chc,chc)
-            #print(nam)
+            nam=shutil.move(chc,chc)
+            print(nam)
             try:
-                bot.send_document(message.chat.id,open(chc,"rb"))
+                bot.send_document(message.chat.id,open(nam,"rb"))
             except:
                 bot.send_message(message.chat.id,("الملف كبير مش هقدر احمله وابعتهولك"))
                 rmtree("Bot")
