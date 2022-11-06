@@ -37,7 +37,7 @@ def start(message):
         chc = yt.streams.get_audio_only().download("Bot")
         nam = chc.splitlines()[0].replace(".mp4", "")
         nam = nam.splitlines()[0].replace(".webm", "")
-        nam=shutil.move(chc,''+nam+'.mp3')
+        nam=shutil.move(chc,nam+'.mp3')
         print(nam)
         try:
             bot.send_document(message.chat.id,open(nam,'rb'))
