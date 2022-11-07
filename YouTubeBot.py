@@ -55,13 +55,12 @@ async def start(event):
         nam=shutil.move(chc,""+nam+".mp3")
         print(nam)
         try:
-            await client.send_audio("me",nam)
-            #bot.send_document(message.chat.id,open(nam,"rb"))
+            await client.send_file(event.chat.id, nam,caption="حملتهولك اهو اي خدعه ابسط اعم 🌚🤍\n ومتنساش تشترك ف قناتي ماشي 🌚👍 \n @YassaTeam")
+ 
         except:
             await event.reply("الملف كبير مش هقدر احمله وابعتهولك")
         else:
             rmtree("Bot")
-            await event.reply("حملتهولك اهو اي خدعه ابسط اعم 🌚🤍\n ومتنساش تشترك ف قناتي ماشي 🌚👍 \n @YassaTeam ")
 
 
 
