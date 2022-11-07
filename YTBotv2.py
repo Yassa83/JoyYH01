@@ -1,9 +1,11 @@
-import shutil
+import shutil,random
 from pytube import YouTube
 from pytube import exceptions
 from pytube import Playlist
 from shutil import *
-from telethon import TelegramClient,events
+from telethon import TelegramClient,events  
+from random import randint
+
 
 client = TelegramClient("bot", 24694743, "f81bb69a0d9ac25aa7d029f2464a56d8")
 
@@ -48,20 +50,25 @@ async def start(event):
               await event.reply("الفيديو دا اتعمله بلوك من يوتيوب يحب يعني مش هعرف احملهولك جرب غيرو كدا🥲")
               
     else:
+        ln = 'abcdefghijklmnopqrstuvwxyz1234567890'
+        fol=random.choice(ln)+random.choice(ln)+random.choice(ln)+'Yassa'+random.choice(ln)+random.choice(ln)+random.choice(ln)
+        print(fol)
         await event.reply("تمام يحب بيتم تحميل الملف الصوتي حاليا..انتظر 🤍")
-        chc = yt.streams.get_audio_only().download("Bot")
+        chc = yt.streams.get_audio_only().download(fol)
         file = chc.splitlines()[0].replace(".mp4", "")
         file = file.splitlines()[0].replace(".webm", "")
         file=shutil.move(chc,""+file+".mp3")
         print(file)
         try:
             await client.send_file(event.chat.id, file,caption="حملتهولك اهو اي خدعه ابسط اعم 🌚🤍\n ومتنساش تشترك ف قناتي ماشي 🌚👍 \n @YassaTeam")
-            rmtree("Bot")
+            
  
         except:
             await event.reply("الملف كبير مش هقدر احمله وابعتهولك")
+            print("False")
         else:
-            print("erorr")
+            rmtree(fol)
+            print("Done")
             
           
 
@@ -86,67 +93,24 @@ async def start(event):
               await event.reply("الفيديو دا اتعمله بلوك من يوتيوب يحب يعني مش هعرف احملهولك جرب غيرو كدا🥲")
               
     else:
+        ln = 'abcdefghijklmnopqrstuvwxyz1234567890'
+        fol=random.choice(ln)+random.choice(ln)+random.choice(ln)+'Yassa'+random.choice(ln)+random.choice(ln)+random.choice(ln)
+        print(fol)
         await event.reply("تمام يحب بيتم تحميل الفيديو حاليا..انتظر 🤍")
-        file = yt.streams.get_highest_resolution().download("Bot")
+        file = yt.streams.get_highest_resolution().download(fol)
         
         print(file)
         try:
             await client.send_file(event.chat.id, file,caption="حملتهولك اهو اي خدعه ابسط اعم 🌚🤍\n ومتنساش تشترك ف قناتي ماشي 🌚👍 \n @YassaTeam")
-            rmtree("Bot")
+            
  
         except:
             await event.reply("الملف كبير مش هقدر احمله وابعتهولك")
+            print("False")
         else:
-            print("erorr")
+            rmtree(fol)
+            print("Done")
 
 
 
 client.run_until_disconnected()
-
-#@bot.message_handler(commands=["start"])
-#def start(message):
-#    bot.send_message(message.chat.id,("طريقه التحميل سهله غير كلمه url برابط الفيديو اللي عايز تحمله سواء كنت عايز تحمله فيديو عادي او اغنيه \n\n/mp3 url لو عايز تنزل اغنيه\n/mp4 url لو عايز تنزل فيديو \n\nلو عايز تحمل قائمه تشغيل كامله بدوسه واحده فمش هتعرف تحملها من البوت لكن هتعرف تحملها من اسكربت البايثون بتاعنا 😀 ابعت /py عشان ابعتلك الاسكربت والشرح \n\nالمطور: @YassaHany\nقناة المطور: @YassaTeam\n"))
-
-#@bot.message_handler(commands=["py"])
-#def start(message):
-#    bot.send_message(message.chat.id,("https://t.me/YassaTeam/5513"))
-
-#@bot.message_handler(commands=["mp3"])
-#def start(message):
-    
-#    
-#@bot.message_handler(commands=["mp4"])
-#def start(message):
-#    url=(message.text)
-#    url=url.split()[1:]
-#    url=" ".join(map(str,url))
-#    print(url)
-#    #url="https://youtu.be/Cmpk8NKhegI"
-#    #yt = YouTube(url)
-#    try:
-#            yt = YouTube(url)
-#    except exceptions.ExtractError:
-#        bot.send_message(message.chat.id,("الرابط غلط او انت مكتبتش رابط اصلا.. اكتبه صح وبطل فزلكه 🙄"))
-#    except exceptions.VideoUnavailable:
-#        bot.send_message(message.chat.id,("الفيديو دا غير متاح او اتحذف يحب يعني مش هعرف احملهولك جرب غيرو كدا 🥲"))
-#    except exceptions.VideoPrivate:
-#            bot.send_message(message.chat.id,("الفيديو دا برايفت يحب يعني مش هعرف احملهولك جرب غيرو كدا 🥲"))
-#    except exceptions.VideoRegionBlocked:
-#              bot.send_message(message.chat.id,("الفيديو دا اتعمله بلوك من يوتيوب يحب يعني مش هعرف احملهولك جرب غيرو كدا🥲"))
-#              
-#    else:
-#            bot.send_message(message.chat.id,("تمام يحب بيتم تحميل اللي طلبته حاليا..انتظر 🤍"))
-#            chc = yt.streams.get_highest_resolution().download("Bot")
-#            nam=shutil.move(chc,chc)
-#            print(nam)
-#            try:
-#                bot.send_document(message.chat.id,open(nam,"rb"))
-#            except:
-#                bot.send_message(message.chat.id,("الملف كبير مش هقدر احمله وابعتهولك"))
-#                rmtree("Bot")
-#            else:
-#                rmtree("Bot")
-#                bot.send_message(message.chat.id,("حملتهولك اهو اي خدعه ابسط اعم 🌚🤍\n ومتنساش تشترك ف قناتي ماشي 🌚👍 \n @YassaTeam "))
-# 
-#print("Bot Running")
-#bot.polling()
