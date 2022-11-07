@@ -2,3 +2,4 @@ pyTelegramBotAPI==3.7.7
 pytube
 telebot
 requests
+telethon
