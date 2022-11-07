@@ -56,11 +56,11 @@ async def start(event):
         print(nam)
         try:
             await client.send_file(event.chat.id, nam,caption="حملتهولك اهو اي خدعه ابسط اعم 🌚🤍\n ومتنساش تشترك ف قناتي ماشي 🌚👍 \n @YassaTeam")
- 
+            rmtree("Bot")
         except:
             await event.reply("الملف كبير مش هقدر احمله وابعتهولك")
         else:
-            rmtree("Bot")
+            print("er")
 
 
 
