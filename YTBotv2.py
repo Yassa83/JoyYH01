@@ -1,16 +1,20 @@
-import shutil,random
+import random,shutil
 from pytube import YouTube
 from pytube import exceptions
-from pytube import Playlist
 from shutil import *
 from telethon import TelegramClient,events  
-from random import randint
+
 
 
 client = TelegramClient("bot", 24694743, "f81bb69a0d9ac25aa7d029f2464a56d8")
 
 client.start()
 print("Bot Running")
+@client.on(events.NewMessage(pattern="^/start"))
+
+async def start(event):
+    await event.reply("طريقه التحميل سهله غير كلمه url برابط الفيديو اللي عايز تحمله سواء كنت عايز تحمله فيديو عادي او اغنيه \n\n/mp3 url لو عايز تنزل اغنيه\n/mp4 url لو عايز تنزل فيديو \n\nلو عايز تحمل قائمه تشغيل كامله بدوسه واحده فمش هتعرف تحملها من البوت لكن هتعرف تحملها من اسكربت البايثون بتاعنا 😀 ابعت /py عشان ابعتلك الاسكربت والشرح \n\nالمطور: @YassaHany\nقناة المطور: @YassaTeam\n")
+
 
 @client.on(events.NewMessage(pattern="^/py"))
 
@@ -53,9 +57,10 @@ async def start(event):
         file = chc.splitlines()[0].replace(".mp4", "")
         file = file.splitlines()[0].replace(".webm", "")
         file=shutil.move(chc,""+file+".mp3")
-        print(file)
+        title=yt.title
+        print(title)
         try:
-            await client.send_file(event.chat.id, file,caption="حملتهولك اهو اي خدعه ابسط اعم 🌚🤍\n ومتنساش تشترك ف قناتي ماشي 🌚👍 \n @YassaTeam")
+            await client.send_file(event.chat.id, file,caption=title+"\n\nDownloaded By: @YouTube_0xBot")
             
  
         except:
@@ -93,10 +98,10 @@ async def start(event):
         print(fol)
         await event.reply("تمام يحب بيتم تحميل الفيديو حاليا..انتظر 🤍")
         file = yt.streams.get_highest_resolution().download(fol)
-        
-        print(file)
+        title=yt.title
+        print(title)
         try:
-            await client.send_file(event.chat.id, file,caption="حملتهولك اهو اي خدعه ابسط اعم 🌚🤍\n ومتنساش تشترك ف قناتي ماشي 🌚👍 \n @YassaTeam")
+            await client.send_file(event.chat.id, file,caption=title+"\n\nDownloaded By: @YouTube_0xBot")
             
  
         except:
@@ -105,6 +110,8 @@ async def start(event):
         else:
             rmtree(fol)
             print("Done")
+
+
 
 
 
