@@ -1,3 +1,3 @@
 print ("الاسكربت مغلق الان من قبل المطور اذا كنت تريد اعاده تشغيله تواصل مع المطور")
 print ("")
-print ("المطور: https://t.me/YassaHany")
+print ("للتواصل مع المطور : https://t.me/YassaHany")
