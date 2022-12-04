@@ -26,9 +26,9 @@ class main():
         global userID            
         userID = response.json()['SignInUserResult']['UserData']['UserID']
         if userID:
-            print(" \033[1;33m                 Successfully logged in")
+            print(" \033[1;33m               Successfully logged in")
             print("\033[1;33m")
-            print('\033[1;31m='*65)
+            print('\033[1;31m='*60)
             print("\033[1;33m")
        
             
@@ -79,33 +79,38 @@ class main():
                 
         req=requests.post(url4,data=data4,headers=headers4)
 
-print('\033[1;31m='*65)      
+print('\033[1;31m='*60)      
 print("\033[1;33m")
 yassa = pyfiglet.figlet_format('    Yassa Team')
 print (yassa)
 
-print('\033[1;31m='*65)
+print('\033[1;31m='*60)
 print("\033[1;33m")
+
 
 print ("\033[1;33m Dev Channel: https://t.me/YassaTeam ")
 webbrowser.open("https://t.me/YassaTeam")
 print("\033[1;33m")
 print (" Dev: https://t.me/YassaHany")
 print("\033[1;33m")
-print('\033[1;31m='*65)
+print('\033[1;31m='*60)
 print("\033[1;33m")
-number=input("Enter Your Phone Number: ")
+print ("\033[1;33m       Welcome To Script Orange&YourLuck By YassaTeam")
 print("\033[1;33m")
-password= input("Enter Your Pass: ")
+print('\033[1;31m='*60)
 print("\033[1;33m")
-print('\033[1;31m='*65)
+number=input(" Enter Your Phone Number: ")
+print("\033[1;33m")
+password= input(" Enter Your Pass: ")
+print("\033[1;33m")
+print('\033[1;31m='*60)
 print("\033[1;33m")
 fox=main(number,password)
 print(" if you want renue press (1)\n to delet (2)\n to do delet and and renuu (3)"+"\n" +" get offer extra(4)")
 print("\033[1;33m")
 delta= input((" Enter Your Choice: "))
 print("\033[1;33m")
-print('\033[1;31m='*65)
+print('\033[1;31m='*60)
 print("\033[1;33m")
 if delta =="1":
     x=fox.token(number,password)  
@@ -127,9 +132,5 @@ else:
     print(" Done remove  Old Bucket And Giv You New Bucket ")
     
 print("\033[1;33m")
-print('\033[1;31m='*65)
+print('\033[1;31m='*60)
 print("\033[1;33m")
-
-
-
-    
