@@ -1,5 +1,7 @@
 import requests,random,time
-
+print('='*60)
+print("Dev: https://t.me/YassaHany")
+print('='*60)
 
 code = input ("Enter Your Code: ")
 cookies = {
@@ -42,5 +44,5 @@ for x in range(9):
     print(response)
     print('='*60)
     print("Change IP....")
-    print('\033[1;30m='*60)
+    print('='*60)
     time.sleep(10)
