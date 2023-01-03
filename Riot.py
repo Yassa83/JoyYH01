@@ -93,8 +93,9 @@ json_data2 = {
 for x in range(999999):
     
     n=random.randint(0000000,99999999)
-    n2=random.randint("qwertyuiopasdfghjklzxcvbnm")
-    n3=random.randint("qwertyuiopasdfghjklzxcvbnm")
+    n3=("qwertyuiopasdfghjklzxcvbnm")
+    n2=random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)
+    n3=random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)
     json_data = {
     'username': f'{n3}',
     'mobile': f'12{n}',
