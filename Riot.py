@@ -146,5 +146,12 @@ for x in range(999999):
     print(response2.text)
     print()
     print("غير ال IP عشان يشتغل")
-    time.sleep(20)
+    print()
+    print("سوف انتظرك لتغير ال ip مده 20 ثانيه")
+    n=0
+    for x in range(20):
+        n=n+1
+        time.sleep(1)
+        print(f"Time.Sleep {n}")
+        
     
