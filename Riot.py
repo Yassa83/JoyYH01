@@ -15,7 +15,7 @@ import os, sys, webbrowser,pyfiglet
 
 
 os.system("clear")
-webbrowser.open("https://t.me/YassaTeam")
+#webbrowser.open("https://t.me/YassaTeam")
 
 print ("\033[1;31m-"*60)
 print("\033[1;33m")
