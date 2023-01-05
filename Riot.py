@@ -92,7 +92,7 @@ json_data2 = {
 
 for x in range(999999):
     
-    n=random.randint(0000000,99999999)
+    n=random.randint(00000000,99999999)
     n3=("qwertyuiopasdfghjklzxcvbnm")
     n2=random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)
     n3=random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)+random.choice(n3)
