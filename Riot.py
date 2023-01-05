@@ -111,47 +111,41 @@ for x in range(999999):
     co = (response.json()['msg'])
     if co=="Restricted Registration":
         print()
-        print("غير ال IP عشان يشتغل")
-    
-    print()
-    json_data3 = {
-    'username': f'{n3}',
-    'password': 'Yassa123',
-    }
-    response3 = requests.post('https://m.riotblockchain.live/v1/login/index', cookies=cookies3, headers=headers, json=json_data3)
-    print(response3.text)
-    
-    print()
-    token= (response3.json()["data"])
-    headers2 = {
-    'authority': 'm.riotblockchain.live',
-    'accept': 'application/json, text/plain, */*',
-    'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
-    'authorization': f'Bearer {token}',
-    'content-type': 'application/json;charset=UTF-8',
-    # 'cookie': 'Language=en-us; PHPSESSID=1ba2a9e3ece1456777acea6f8521a00f',
-    'language': 'en',
-    'origin': 'https://m.riotblockchain.live',
-    'referer': 'https://m.riotblockchain.live/ar/',
-    'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-    'sec-ch-ua-mobile': '?1',
-    'sec-ch-ua-platform': '"Android"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 13; SM-M526BR) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36',
-    }
-    time.sleep(2)
-    response2 = requests.post('https://m.riotblockchain.live/v1/order/create', cookies=cookies2, headers=headers2, json=json_data2)
-    print(response2.text)
-    print()
-    print("غير ال IP عشان يشتغل")
-    print()
-    print("سوف انتظرك لتغير ال ip مده 20 ثانيه")
-    n=0
-    for x in range(20):
-        n=n+1
-        time.sleep(1)
-        print(f"Time.Sleep {n}")
+        i = input("Change IP and Press Enter : ")
+   
+    elif co == "register successful":
+        print()
+        json_data3 = {
+        'username': f'{n3}',
+        'password': 'Yassa123',
+        }
+        response3 = requests.post('https://m.riotblockchain.live/v1/login/index', cookies=cookies3, headers=headers, json=json_data3)
+        print(response3.text)
+        print()
+        token= (response3.json()["data"])
+        headers2 = {
+        'authority': 'm.riotblockchain.live',
+        'accept': 'application/json, text/plain, */*',
+        'accept-language': 'ar-AE,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+        'authorization': f'Bearer {token}',
+        'content-type': 'application/json;charset=UTF-8',
+        'language': 'en',
+        'origin': 'https://m.riotblockchain.live',
+        'referer': 'https://m.riotblockchain.live/ar/',
+        'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Linux; Android 13; SM-M526BR) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36',
+        }
+        time.sleep(2)
+        response2 = requests.post('https://m.riotblockchain.live/v1/order/create', cookies=cookies2, headers=headers2, json=json_data2)
+        print(response2.text)
+        print()
+        i = input("Change IP and Press Enter : ")
         
     
+    else:
+        i = input("Change IP and Press Enter : ")
